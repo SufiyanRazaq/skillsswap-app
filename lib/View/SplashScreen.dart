@@ -13,7 +13,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Navigate to Onboarding Screen after 3 seconds
     Timer(
       const Duration(seconds: 5),
       () => Navigator.pushReplacement(
@@ -63,14 +62,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // App Icon or Logo
                     Image.asset(
-                      'assets/images/app_icon.png', // Replace with your logo
+                      'assets/images/app_icon.png',
                       height: 120,
                     ),
                     const SizedBox(height: 10),
-
-                    // App Title
                     Text(
                       "SkillSwap",
                       style: GoogleFonts.poppins(
@@ -80,8 +76,6 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ),
                     const SizedBox(height: 10),
-
-                    // Tagline
                     Text(
                       "Empower Your Skills",
                       style: GoogleFonts.poppins(
@@ -90,8 +84,6 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ),
                     const SizedBox(height: 20),
-
-                    // Loading Indicator
                     const CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation<Color>(
                         Colors.white,

@@ -33,7 +33,6 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Button
                     Align(
                       alignment: Alignment.topLeft,
                       child: IconButton(
@@ -48,15 +47,11 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-
-                    // Profile Photo
                     CircleAvatar(
                       radius: 60,
                       backgroundImage: AssetImage(user['image']),
                     ),
                     const SizedBox(height: 20),
-
-                    // Name and Skill
                     Text(
                       user['name'],
                       style: GoogleFonts.poppins(
@@ -74,8 +69,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-
-                    // Bio Section
                     Text(
                       "Hello! I specialize in ${user['skill']} and have helped many learners grow in this field. "
                       "I'm passionate about sharing knowledge and connecting with others.",
@@ -86,8 +79,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 30),
-
-                    // Availability
                     Text(
                       "Availability",
                       style: GoogleFonts.poppins(
@@ -105,8 +96,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 30),
-
-                    // Reviews / Ratings
                     Text(
                       "⭐ ${user['rating']} Rating from Previous Swaps",
                       style: GoogleFonts.poppins(
@@ -115,8 +104,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 30),
-
-                    // Request Swap Button
                     ElevatedButton(
                       onPressed: () {
                         Fluttertoast.showToast(
@@ -140,8 +127,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-
-                    // Contact Button
                     ElevatedButton(
                       onPressed: () {
                         Fluttertoast.showToast(

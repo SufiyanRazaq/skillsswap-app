@@ -196,7 +196,6 @@ class _SkillSelectionScreenState extends State<SkillSelectionScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Title
                         Text(
                           "Select Your Skills",
                           style: GoogleFonts.poppins(
@@ -214,8 +213,6 @@ class _SkillSelectionScreenState extends State<SkillSelectionScreen> {
                           ),
                         ),
                         const SizedBox(height: 40),
-
-                        // Skill Offer Dropdown
                         buildDropdown("Skills I Offer", offerSkill,
                             (String? value) {
                           setState(() {
@@ -227,13 +224,8 @@ class _SkillSelectionScreenState extends State<SkillSelectionScreen> {
                           });
                         }),
                         const SizedBox(height: 20),
-
-                        // Display Selected Offer Skills
                         buildSkillChips(selectedOfferSkills, "offer"),
-
                         const SizedBox(height: 30),
-
-                        // Skill Learn Dropdown
                         buildDropdown("Skills I Want to Learn", learnSkill,
                             (String? value) {
                           setState(() {
@@ -244,15 +236,9 @@ class _SkillSelectionScreenState extends State<SkillSelectionScreen> {
                             }
                           });
                         }),
-
                         const SizedBox(height: 20),
-
-                        // Display Selected Learn Skills
                         buildSkillChips(selectedLearnSkills, "learn"),
-
                         const SizedBox(height: 40),
-
-                        // Save Button
                         ElevatedButton(
                           onPressed: _saveSkills,
                           style: ElevatedButton.styleFrom(
@@ -285,7 +271,6 @@ class _SkillSelectionScreenState extends State<SkillSelectionScreen> {
     );
   }
 
-  // Skill Dropdown Builder
   Widget buildDropdown(
       String label, String? selectedValue, ValueChanged<String?> onChanged) {
     return Column(
@@ -334,7 +319,6 @@ class _SkillSelectionScreenState extends State<SkillSelectionScreen> {
     );
   }
 
-  // Skill Chip Builder
   Widget buildSkillChips(List<String> skills, String type) {
     return Wrap(
       spacing: 8,
@@ -366,7 +350,6 @@ class _SkillSelectionScreenState extends State<SkillSelectionScreen> {
     } else {
       Fluttertoast.showToast(msg: "Skills saved successfully!");
 
-      // Navigate to the Dashboard Screen
       Navigator.push(
         context,
         MaterialPageRoute(

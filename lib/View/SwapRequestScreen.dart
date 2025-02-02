@@ -58,7 +58,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Back Button
                   IconButton(
                     onPressed: () {
                       Navigator.pop(context);
@@ -70,8 +69,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
                     ),
                   ),
                   const SizedBox(height: 10),
-
-                  // Page Header
                   Text(
                     "Request Swap",
                     style: GoogleFonts.poppins(
@@ -89,13 +86,8 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
                     ),
                   ),
                   const SizedBox(height: 40),
-
-                  // User Profile Card
                   _buildUserCard(widget.user),
-
                   const SizedBox(height: 40),
-
-                  // Form Section
                   Form(
                     key: _formKey,
                     child: Column(
@@ -112,7 +104,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
                           },
                         ),
                         const SizedBox(height: 25),
-
                         _buildDropdown(
                           "Skill You Want to Learn",
                           selectedDesiredSkill,
@@ -124,7 +115,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
                           },
                         ),
                         const SizedBox(height: 25),
-
                         _buildDropdown(
                           "Select Duration",
                           selectedDuration,
@@ -136,7 +126,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
                           },
                         ),
                         const SizedBox(height: 25),
-
                         _buildDropdown(
                           "Select Time Slot",
                           selectedTimeSlot,
@@ -148,8 +137,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
                           },
                         ),
                         const SizedBox(height: 30),
-
-                        // Message Field
                         TextFormField(
                           controller: messageController,
                           maxLines: 3,
@@ -166,8 +153,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
                           ),
                         ),
                         const SizedBox(height: 40),
-
-                        // Submit Button
                         ElevatedButton(
                           onPressed: _submitRequest,
                           style: ElevatedButton.styleFrom(
@@ -200,7 +185,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
     );
   }
 
-  // User Card Display at Top
   Widget _buildUserCard(Map<String, dynamic> user) {
     return Container(
       padding: const EdgeInsets.all(20),
@@ -251,7 +235,6 @@ class _SwapRequestScreenState extends State<SwapRequestScreen> {
     );
   }
 
-  // Dropdown Builder
   Widget _buildDropdown(String label, String? selectedValue, List<String> items,
       ValueChanged<String?> onChanged) {
     return Column(

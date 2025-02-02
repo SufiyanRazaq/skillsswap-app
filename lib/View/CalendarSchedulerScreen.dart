@@ -105,8 +105,6 @@ class _CalendarSchedulerScreenState extends State<CalendarSchedulerScreen> {
                 });
               },
               eventLoader: _getEventsForDay,
-
-              // Header Style
               headerStyle: HeaderStyle(
                 titleTextStyle: GoogleFonts.poppins(
                   fontSize: 18,
@@ -122,8 +120,6 @@ class _CalendarSchedulerScreenState extends State<CalendarSchedulerScreen> {
                   color: Colors.white,
                 ),
               ),
-
-              // Calendar Style
               calendarStyle: CalendarStyle(
                 todayDecoration: const BoxDecoration(
                   color: Colors.teal,
@@ -141,8 +137,6 @@ class _CalendarSchedulerScreenState extends State<CalendarSchedulerScreen> {
                 weekendTextStyle: const TextStyle(color: Colors.white70),
                 defaultTextStyle: GoogleFonts.poppins(color: Colors.white),
               ),
-
-              // Days of the Week Style
               daysOfWeekStyle: DaysOfWeekStyle(
                 weekdayStyle: GoogleFonts.poppins(
                   color: Colors.white,

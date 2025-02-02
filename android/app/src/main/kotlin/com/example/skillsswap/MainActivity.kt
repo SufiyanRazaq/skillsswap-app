@@ -1,4 +1,4 @@
-package com.example.skillsswap
+package com.sufiyan.skillsswap
 
 import io.flutter.embedding.android.FlutterActivity
 

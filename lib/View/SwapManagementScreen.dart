@@ -49,7 +49,6 @@ class _SwapManagementScreenState extends State<SwapManagementScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header
                 Row(
                   children: [
                     IconButton(
@@ -75,13 +74,8 @@ class _SwapManagementScreenState extends State<SwapManagementScreen> {
                   ),
                 ),
                 const SizedBox(height: 30),
-
-                // Tabs
                 _buildTabs(),
-
                 const SizedBox(height: 20),
-
-                // Content
                 Expanded(
                   child: _buildContent(),
                 ),
@@ -93,7 +87,6 @@ class _SwapManagementScreenState extends State<SwapManagementScreen> {
     );
   }
 
-  // Tabs for Filtering
   Widget _buildTabs() {
     List<String> tabs = ["Pending", "Upcoming", "Completed"];
     return SingleChildScrollView(
@@ -131,7 +124,6 @@ class _SwapManagementScreenState extends State<SwapManagementScreen> {
     );
   }
 
-  // Content based on selected tab
   Widget _buildContent() {
     List<Map<String, String>> swaps;
     switch (selectedTab) {
@@ -163,7 +155,6 @@ class _SwapManagementScreenState extends State<SwapManagementScreen> {
           );
   }
 
-  // Swap Card
   Widget _buildSwapCard(Map<String, String> swap) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 12),

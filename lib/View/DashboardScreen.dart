@@ -6,7 +6,6 @@ import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:skillsswap/View/CalendarSchedulerScreen.dart';
 import 'package:skillsswap/View/ChatList.dart';
 import 'package:skillsswap/View/ExploreScreen.dart';
-import 'package:skillsswap/View/SkillSelection.dart';
 import 'package:skillsswap/View/SwapManagementScreen.dart';
 import 'SwapRequestScreen.dart';
 
@@ -86,7 +85,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Header
                   Text(
                     "Dashboard",
                     style: GoogleFonts.poppins(
@@ -104,25 +102,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                   ),
                   const SizedBox(height: 40),
-
-                  // Skill Hours Overview
                   _buildSkillCard(),
-
                   const SizedBox(height: 30),
-
-                  // Quick Actions Section
                   _buildQuickActions(),
-
                   const SizedBox(height: 40),
-
-                  // Upcoming Swaps
                   _buildUpcomingSwaps(),
-
                   const SizedBox(height: 40),
-
-                  // Recommendations Section
                   _buildRecommendations(),
-
                   const SizedBox(height: 50),
                 ],
               ),
@@ -178,7 +164,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  // Skill Hours Card
   Widget _buildSkillCard() {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
@@ -225,7 +210,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  // Quick Actions Section
   Widget _buildQuickActions() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -293,7 +277,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  // Upcoming Swaps Section
   Widget _buildUpcomingSwaps() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -326,7 +309,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  // Recommendations Section
   Widget _buildRecommendations() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -366,15 +348,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // User Avatar
           CircleAvatar(
             radius: 35,
             backgroundColor: Colors.white.withOpacity(0.3),
             child: Icon(Icons.person, size: 40, color: Colors.black54),
           ),
           const SizedBox(width: 20),
-
-          // User Details
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -396,8 +375,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                 ),
                 const SizedBox(height: 15),
-
-                // Request Button - Below the text
                 ElevatedButton(
                   onPressed: () {
                     Fluttertoast.showToast(msg: "Requested ${user['skill']}");

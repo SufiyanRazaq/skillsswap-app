@@ -63,8 +63,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 );
               },
             ),
-
-            // Skip and Next Buttons
             Positioned(
               top: 50,
               right: 30,
@@ -81,8 +79,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
             ),
-
-            // Next or Done Button
             Positioned(
               bottom: 100,
               right: 30,
@@ -105,8 +101,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
             ),
-
-            // Page Indicator Dots
             Positioned(
               bottom: 60,
               left: 0,
@@ -124,7 +118,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // Onboarding Page Layout with Glassmorphism
   Widget buildOnboardingPage(String title, String description, String path) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 100),
@@ -177,7 +170,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // Dot Indicator for Page View
   Widget buildDotIndicator(bool isActive) {
     return Container(
       height: 10,
@@ -190,7 +182,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // Navigation to Signup/Login
   void _navigateToSignup(BuildContext context) {
     Navigator.pushReplacement(
       context,

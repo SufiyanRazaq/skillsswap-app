@@ -14,7 +14,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   bool _isPasswordVisible = false;
 
-  // Controllers
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -38,8 +37,6 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   const SizedBox(height: 100),
-
-                  // Header Text
                   Text(
                     "Welcome Back",
                     style: GoogleFonts.poppins(
@@ -57,8 +54,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 50),
-
-                  // Glassmorphic Login Card
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: BackdropFilter(
@@ -89,8 +84,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               const SizedBox(height: 20),
                               buildPasswordField(
                                   "Password", passwordController),
-
-                              // Forgot Password Button
                               Align(
                                 alignment: Alignment.centerRight,
                                 child: TextButton(
@@ -108,8 +101,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                               const SizedBox(height: 15),
-
-                              // Login Button (Navigate to Skill Screen)
                               ElevatedButton(
                                 onPressed: _login,
                                 style: ElevatedButton.styleFrom(
@@ -138,8 +129,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 30),
-
-                  // Google Sign-In Button
                   ElevatedButton.icon(
                     onPressed: _googleSignIn,
                     style: ElevatedButton.styleFrom(
@@ -166,8 +155,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 30),
-
-                  // Signup Redirect
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -215,12 +202,10 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  // Navigate to Skill Selection Page after login
   void _login() {
     if (_formKey.currentState!.validate()) {
       Fluttertoast.showToast(msg: "Logged in successfully!");
 
-      // Navigate to Skill Selection Page
       Navigator.push(
         context,
         MaterialPageRoute(

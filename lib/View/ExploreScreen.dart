@@ -1,7 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:skillsswap/View/ProfileScreen.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -78,20 +77,19 @@ class _ExploreScreenState extends State<ExploreScreen> {
         ),
         child: SafeArea(
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Header
                   Row(
                     children: [
                       IconButton(
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_back_ios,
                           color: Colors.white,
                           size: 28,
@@ -116,18 +114,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     ),
                   ),
                   const SizedBox(height: 30),
-
-                  // Search Bar
                   _buildSearchBar(),
-
                   const SizedBox(height: 20),
-
-                  // Filter Options
                   _buildFilterOptions(),
-
                   const SizedBox(height: 30),
-
-                  // User Listings
                   _buildUserList(),
                 ],
               ),
@@ -138,7 +128,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
     );
   }
 
-  // Search Bar
   Widget _buildSearchBar() {
     return TextField(
       onChanged: (value) {
@@ -162,7 +151,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
     );
   }
 
-  // Filter Options
   Widget _buildFilterOptions() {
     List<String> filters = [
       "All",
@@ -195,7 +183,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
     );
   }
 
-  // User List with Cards
   Widget _buildUserList() {
     return Column(
       children: filteredUsers.map((user) {

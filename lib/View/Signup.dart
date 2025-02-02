@@ -14,7 +14,6 @@ class _SignupScreenState extends State<SignupScreen> {
   bool _isChecked = false;
   bool _isPasswordVisible = false;
 
-  // Controllers
   TextEditingController emailController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -40,8 +39,6 @@ class _SignupScreenState extends State<SignupScreen> {
               child: Column(
                 children: [
                   const SizedBox(height: 80),
-
-                  // Header Text
                   Text(
                     "Create Account",
                     style: GoogleFonts.poppins(
@@ -59,8 +56,6 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   const SizedBox(height: 50),
-
-                  // Glassmorphic Signup Card
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: BackdropFilter(
@@ -98,8 +93,6 @@ class _SignupScreenState extends State<SignupScreen> {
                               buildPasswordField("Confirm Password",
                                   confirmPasswordController),
                               const SizedBox(height: 20),
-
-                              // Terms Checkbox
                               Row(
                                 children: [
                                   Checkbox(
@@ -131,8 +124,6 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ],
                               ),
                               const SizedBox(height: 30),
-
-                              // Signup Button (Navigate to Skill Screen)
                               ElevatedButton(
                                 onPressed: _signUp,
                                 style: ElevatedButton.styleFrom(
@@ -160,8 +151,6 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   const SizedBox(height: 30),
-
-                  // Google Sign-In Button
                   ElevatedButton.icon(
                     onPressed: _googleSignIn,
                     style: ElevatedButton.styleFrom(
@@ -188,8 +177,6 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   const SizedBox(height: 30),
-
-                  // Redirect to Login
                   GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
@@ -237,7 +224,6 @@ class _SignupScreenState extends State<SignupScreen> {
       if (_isChecked) {
         Fluttertoast.showToast(msg: "Account Created Successfully!");
 
-        // Navigate to Skill Selection Page
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -254,7 +240,6 @@ class _SignupScreenState extends State<SignupScreen> {
     Fluttertoast.showToast(msg: "Google Sign-In Clicked!");
   }
 
-  // Custom Password Field Widget
   Widget buildPasswordField(String hintText, TextEditingController controller) {
     return TextFormField(
       controller: controller,
